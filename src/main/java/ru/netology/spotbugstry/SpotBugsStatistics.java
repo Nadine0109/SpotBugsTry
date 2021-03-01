@@ -15,4 +15,19 @@ public class SpotBugsStatistics {
                 current_max = income;
         return current_max;
     }
+    public long calculateSum(long[] incomes) {
+        long sum = 0;
+        for (long income : incomes) {
+            sum += income;
+        }
+        return sum;
+    }
+
+    public long findAverageSum(long[] incomes) {
+        long sum = calculateSum(incomes);
+
+        long averageSum = sum / incomes.length;
+
+        return averageSum;
+    }
 }
